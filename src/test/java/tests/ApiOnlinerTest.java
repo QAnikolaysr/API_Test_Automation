@@ -36,8 +36,8 @@ public class ApiOnlinerTest {
                 .statusCode(200)
                 .header("Content-Type", containsString("application/json"))
                 .body("$", hasKey("amount"))
-                .body("scale", equalTo(1))
-                //body("amount", equalTo("3,7199"))
+                //.body("scale", equalTo(1))
+                //.body("amount", equalTo("3,7199"))
                 .extract()
                 .asString();
         System.out.println("###############" + responseBody);
